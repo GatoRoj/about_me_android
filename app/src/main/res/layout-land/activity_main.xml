@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription=""
+        app:backgroundTint="@color/design_default_color_primary"
+        app:srcCompat="@drawable/mail" />
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/redcat"></ImageView>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/design_default_color_primary_dark"
+                android:fontFamily="@font/poppins"
+                android:padding="16dp"
+                android:text="Hola, Soy Marcos Escobar, Programador trainner fullstack java, Estudiando en talento digital, aprendiendo cosas nuevas con ganas y enstusiasmo."
+                android:textColor="@android:color/white"
+                android:textSize="16sp"></TextView>
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:divider="?android:dividerHorizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:showDividers="middle|end"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/CustomTable.row"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:fontFeatureSettings=" "
+                        android:text="Anos de experiencia" />
+
+                    <TextView
+                        style="@style/CustomTable.Header"
+                        android:fontFamily="@font/poppins"
+                        android:text="0.1" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/CustomTable.row"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Nivel de motivacion" />
+
+                    <TextView
+                        style="@style/CustomTable.row"
+                        android:fontFamily="@font/poppins"
+                        android:text="Extremadamente alta" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
